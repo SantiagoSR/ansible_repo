@@ -1,0 +1,11 @@
+---
+- name: Ensure connection
+  debug:
+    msg: "The bastion is connected"
+- name : Which directory
+  shell:
+    cmd: |
+      cd /home/ubuntu/
+      pwd
+      ls -la
+      echo "ready to run common tasks"

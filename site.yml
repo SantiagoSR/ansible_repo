@@ -1,0 +1,4 @@
+---
+- import_playbook: bastion.yml
+- import_playbook: web-servers.yml
+- import_playbook: data-base.yml

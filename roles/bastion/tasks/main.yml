@@ -1,0 +1,8 @@
+---
+- name: Copy ansible_project UI
+  become: yes
+  become_method: sudo
+  copy:
+    src: ../ansible/*
+    dest: /home/ubuntu/ansible_repo/
+    owner: ubuntu

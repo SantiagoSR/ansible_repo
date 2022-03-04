@@ -1,0 +1,7 @@
+- name: DB fill query
+  become: yes
+  become_method: sudo
+  shell:
+    cmd:  |
+      cd /home/ubuntu/
+      mysql -usantiago -e "SOURCE /home/ubuntu/movie-api/data_model/table_creation_and_inserts.sql;" -hterraform-20220225204915399700000004.cx02uzagq3fl.us-west-1.rds.amazonaws.com -plycantropo
