@@ -1,5 +1,4 @@
 ---
 - hosts: bastion
   roles:
-    - common
     - bastion
