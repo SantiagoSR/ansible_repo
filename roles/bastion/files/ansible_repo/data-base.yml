@@ -1,0 +1,5 @@
+---
+- hosts: db-host
+  roles:
+    - common
+    - db-host
