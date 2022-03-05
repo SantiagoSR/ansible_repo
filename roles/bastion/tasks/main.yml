@@ -6,3 +6,13 @@
     src:  ansible_repo
     dest: /home/ubuntu/
     owner: ubuntu
+- name: Create files directory in bastion
+  shell:
+    cmd: |
+      cd /home/ubuntu/ansible_repo/roles/web-servers/
+      pwd
+      ls -la
+      echo "ready to create file directory"
+      mkdir files
+      ls -la
+
