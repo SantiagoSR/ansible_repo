@@ -3,6 +3,6 @@
   become: yes
   become_method: sudo
   copy:
-    src:  ansible_repo/*
+    src:  ansible_repo/
     dest: /home/ubuntu/ansible_repo/
     owner: ubuntu
