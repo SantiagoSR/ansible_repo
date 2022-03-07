@@ -30,6 +30,6 @@
     cmd: |
       cd /home/ubuntu/ansible_repo/
       pwd
-      ansible-playbook 
+      ansible-playbook data_base.yml -i inventory -u ubuntu 
 
 
