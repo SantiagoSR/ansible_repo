@@ -16,10 +16,11 @@
     owner: ubuntu
 
 - name: Create files directory in bastion
+  become: yes
+  become_method: sudo
   shell:
     cmd: |
-      cd /home/ubuntu/
-      pwd
-      DB_HOST=$(tail -1 ansible_repo/roles/bastion/files/.env)
+      DB_HOST=$(tail -1 /home/ubuntu/ansible_repo/roles/web-servers/files/.env)
       export DB_HOST
+
 
