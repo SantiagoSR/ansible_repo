@@ -1,0 +1,7 @@
+- name: DB fill query
+  become: yes
+  become_method: sudo
+  shell:
+    cmd: |
+      cd /home/ubuntu/
+      mysql -usantiago -e "SOURCE /home/ubuntu/movie-api/data_model/table_creation_and_inserts.sql;" -h$(tail -1 /home/ubuntu/ansible_repo/roles/web_servers/files/.env) -plycantropo
