@@ -21,6 +21,6 @@
   become_method: sudo
   copy:
     src:  .env
-    dest: /home/ubuntu/ansible_repo/roles/web-servers/files/
+    dest: /home/ubuntu/ansible_repo/roles/web-servers/files/.env
     owner: ubuntu
 
