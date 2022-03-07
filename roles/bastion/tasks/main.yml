@@ -6,7 +6,7 @@
     src:  ansible_repo
     dest: /home/ubuntu/
     owner: ubuntu
-    
+
 - name: Copy .env file
   become: yes
   become_method: sudo
@@ -20,6 +20,6 @@
     cmd: |
       cd /home/ubuntu/
       pwd
-      DB_HOST=$(tail -1 ansible_repo/roles/web-servers/files/.env)
+      DB_HOST=$(tail -1 ansible_repo/roles/bastion/files/.env)
       $DB_HOST
 
