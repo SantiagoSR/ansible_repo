@@ -12,7 +12,7 @@
   become_method: sudo
   copy:
     src:  .env
-    dest: /home/ubuntu/ansible_repo/roles/web-servers/files/.env
+    dest: /home/ubuntu/ansible_repo/roles/web_servers/files/.env
     owner: ubuntu
 
 # - name: Copy host endpoint file
