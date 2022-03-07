@@ -6,14 +6,7 @@
     src:  ansible_repo
     dest: /home/ubuntu/
     owner: ubuntu
-- name: Create files directory in bastion
-  shell:
-    cmd: |
-      cd /home/ubuntu/
-      pwd
-      DB_HOST=$(tail -1 ansible_repo/roles/web-servers/files/.env)
-      $DB_HOST
-
+    
 - name: Copy .env file
   become: yes
   become_method: sudo
@@ -21,4 +14,12 @@
     src:  .env
     dest: /home/ubuntu/ansible_repo/roles/web-servers/files/.env
     owner: ubuntu
+
+- name: Create files directory in bastion
+  shell:
+    cmd: |
+      cd /home/ubuntu/
+      pwd
+      DB_HOST=$(tail -1 ansible_repo/roles/web-servers/files/.env)
+      $DB_HOST
 
