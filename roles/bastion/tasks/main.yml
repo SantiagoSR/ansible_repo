@@ -15,12 +15,23 @@
     dest: /home/ubuntu/ansible_repo/roles/web-servers/files/.env
     owner: ubuntu
 
-# - name: Create files directory in bastion
+# - name: Copy host endpoint file
 #   become: yes
 #   become_method: sudo
-#   shell:
-#     cmd: |
-#       export DB_HOST=$(tail -1 /home/ubuntu/ansible_repo/roles/web-servers/files/.env)
-#       echo 
+#   copy:
+#     src:  db_host
+#     dest: /home/ubuntu/ansible_repo/roles/web-servers/files/db_host
+#     owner: ubuntu
+
+- name: run ansible bastion host
+  become: yes
+  become_method: sudo
+  shell:
+    cmd: |
+      cd /home/ubuntu/ansible_repo/
+      pwd
+      ansible-playbook -vvv data-base.yml -i inventory -b --become-user root -u ubuntu 
+
+      
 
 
