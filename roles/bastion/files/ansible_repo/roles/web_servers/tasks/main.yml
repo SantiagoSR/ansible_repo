@@ -22,3 +22,4 @@
     cmd:  |
       cd /home/ubuntu/
       sudo su -c "node /home/ubuntu/movies-ui/server.js &" santiago
+      sudo su -c "node /home/ubuntu/movie-api/server.js &" santiago
