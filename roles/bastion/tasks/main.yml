@@ -6,7 +6,7 @@
     src:  ansible_repo
     dest: /home/ubuntu/
     owner: ubuntu
-- name: Run ansible in db_host
+- name: Create dir files in web_servers bastion
   become: yes
   become_method: sudo
   shell:
