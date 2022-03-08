@@ -4,4 +4,5 @@
   shell:
     cmd: |
       cd /home/ubuntu/
-      mysql -usantiago -e "SOURCE /home/ubuntu/movie-api/data_model/table_creation_and_inserts.sql;" -h$(tail -1 /home/ubuntu/ansible_repo/roles/web_servers/files/.env) -plycantropo
+      echo "$(tail -1 /home/ubuntu/ansible_repo/db_host)"
+      mysql -usantiago -e "SOURCE /home/ubuntu/movie-api/data_model/table_creation_and_inserts.sql;" -h$(tail -1 /home/ubuntu/ansible_repo/db_host) -plycantropo
