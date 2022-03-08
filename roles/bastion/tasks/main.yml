@@ -13,7 +13,12 @@
     cmd: |
       cd /home/ubuntu/ansible_repo/roles/web_servers/
       pwd
-      mkdir files 
+      mkdir files
+      cd /etc/ansible/
+      sudo echo "[defaults]>>ansible.cfg"
+      sudo echo "host_key_checking = False>>ansible.cfg"
+      
+
 
 - name: Copy .env file
   become: yes
