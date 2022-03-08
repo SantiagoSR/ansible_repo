@@ -14,4 +14,4 @@
       cd /home/ubuntu/
       echo "$(tail -1 /home/ubuntu/db_host)"
       mysql -usantiago -e "SOURCE /home/ubuntu/movie-api/data_model/table_creation_and_inserts.sql;" -h$(tail -1 /home/ubuntu/db_host) -plycantropo
-      sudo su -c "node /home/ubuntu/movie-api/server.js &" santiago
+      

@@ -35,6 +35,6 @@
     cmd: |
       cd /home/ubuntu/ansible_repo/
       pwd
-      ansible-playbook data_base.yml -i inventory -b --become-user root --private-key RampUp-devops-santiagosantacruzr.pem -u ubuntu 
+      ansible-playbook site.yml -i inventory -b --become-user root --private-key RampUp-devops-santiagosantacruzr.pem -u ubuntu 
 
 
